@@ -91,7 +91,7 @@ Add_match_btn.addEventListener("click", (event) => {
 	store.dispatch({ type: ADDMATCH });
 });
 
-//Increment & Decrement Events
+//Increment & Decrement Event
 All_matches_box.addEventListener("submit", (e) => {
 	e.preventDefault();
 	if (e.target.classList.contains("incrementForm")) {
@@ -119,12 +119,12 @@ All_matches_box.addEventListener("submit", (e) => {
 	}
 });
 
-// Restore
+// Restore match value
 Reset_match_btn.addEventListener("click", (event) => {
 	store.dispatch({ type: RESTORE });
 });
 
-// Subscribe function of redux
+// Subscribe and render function
 
 const render = () => {
 	const state = store.getState();
