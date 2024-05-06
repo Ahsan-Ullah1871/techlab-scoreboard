@@ -1,10 +1,10 @@
 // ALL ELEMENTS
 const All_matches_box = document.querySelector(".all-matches");
-const Add_match_btn = document.querySelector(".lws-addMatch");
-const Reset_match_btn = document.querySelector(".lws-reset");
+const Add_match_btn = document.querySelector(".techlab-addMatch");
+const Reset_match_btn = document.querySelector(".techlab-reset");
 const Increment_submit = document.querySelectorAll("form");
 const Decrement_submit = document.querySelectorAll(".decrementForm");
-const Match_result = document.querySelectorAll(".lws-singleResult");
+const Match_result = document.querySelectorAll(".techlab-singleResult");
 
 //ALL ACTION TYPES
 const INCREMENT = "increment";
@@ -98,7 +98,7 @@ All_matches_box.addEventListener("submit", (e) => {
 		const match_div = e.target.closest(".match");
 		const match_id = match_div.id;
 		const increment_value = parseInt(
-			e.target.querySelector(".lws-increment").value
+			e.target.querySelector(".techlab-increment").value
 		);
 
 		console.log(increment_value, match_id);
@@ -110,7 +110,7 @@ All_matches_box.addEventListener("submit", (e) => {
 		const match_div = e.target.closest(".match");
 		const match_id = match_div.id;
 		const decrement_value = parseInt(
-			e.target.querySelector(".lws-decrement").value
+			e.target.querySelector(".techlab-decrement").value
 		);
 		store.dispatch({
 			type: DECREMENT,
@@ -135,23 +135,25 @@ const render = () => {
 				` <div class="match" id=${
 					match.id
 				}><div class="wrapper">
-        <button class="lws-delete">
+        <button class="techlab-delete">
           <img src="./image/delete.svg" alt="" />
         </button>
-        <h3 class="lws-matchName">Match ${index + 1}</h3>
+        <h3 class="techlab-matchName">Match ${index + 1}</h3>
       </div>
       <div class="inc-dec">
         <form class="incrementForm">
           <h4>Increment</h4>
-          <input type="number" name="increment" class="lws-increment" />
+          <input type="number" name="increment" class="techlab-increment" />
         </form>
         <form class="decrementForm">
           <h4>Decrement</h4>
-          <input type="number" name="decrement" class="lws-decrement" />
+          <input type="number" name="decrement" class="techlab-decrement" />
         </form>
       </div>
       <div class="numbers">
-        <h2 class="lws-singleResult" id="${match.id}-result">${match.data}</h2>
+        <h2 class="techlab-singleResult" id="${match.id}-result">${
+					match.data
+				}</h2>
       </div></div>`
 		)
 		.join("");
