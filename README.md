@@ -43,3 +43,8 @@ provides functionality to increment, decrement, and reset scores for each match.
 - JavaScript
 - Redux (for state management)
 
+## Deployed Live Link
+
+The project is deployed and accessible live at
+[https://techlab-scoreboard.vercel.app/](https://techlab-scoreboard.vercel.app/).
+
